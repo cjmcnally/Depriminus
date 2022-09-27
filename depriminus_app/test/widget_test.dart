@@ -5,7 +5,10 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:depriminus_app/HomePage/home_page.dart';
+// ignore_for_file: unused_import
+
+import 'package:depriminus_app/pages/home_page.dart';
+import 'package:depriminus_app/assets/emoticon_face.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:depriminus_app/main.dart';
