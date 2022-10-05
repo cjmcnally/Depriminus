@@ -1,8 +1,7 @@
 // ignore_for_file: unused_import, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:depriminus_app/pages/home_page.dart';
-import 'package:depriminus_app/assets/emoticon_face.dart';
+import 'package:depriminus_app/util/emoticon_face.dart';
 
 void main() {
   runApp(const MyApp());

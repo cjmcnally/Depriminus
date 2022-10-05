@@ -1,11 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
-import 'package:depriminus_app/assets/emoticon_face.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_emoji/flutter_emoji.dart';
+import 'package:depriminus_app/util/emoticon_face.dart';
 
 // Home Screen
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -75,6 +72,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: 25,
                   ),
+
                   // Mood tracker
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -82,9 +80,12 @@ class _HomePageState extends State<HomePage> {
                       // bad
                       Column(
                         children: [
-                          EmoticonFace(emoticonFace: ''),
+                          IconButton(
+                              icon: Image.asset('images/sad.png'),
+                              iconSize: 10,
+                              onPressed: () {}),
                           SizedBox(
-                            height: 7,
+                            height: 8,
                           ),
                           Text(
                             'Bad',
@@ -98,9 +99,12 @@ class _HomePageState extends State<HomePage> {
                       // fine
                       Column(
                         children: [
-                          EmoticonFace(emoticonFace: ''),
+                          IconButton(
+                              icon: Image.asset('images/confused.png'),
+                              iconSize: 10,
+                              onPressed: () {}),
                           SizedBox(
-                            height: 7,
+                            height: 8,
                           ),
                           Text(
                             'Fine',
@@ -114,9 +118,12 @@ class _HomePageState extends State<HomePage> {
                       // good
                       Column(
                         children: [
-                          EmoticonFace(emoticonFace: ''),
+                          IconButton(
+                              icon: Image.asset('images/smile.png'),
+                              iconSize: 10,
+                              onPressed: () {}),
                           SizedBox(
-                            height: 7,
+                            height: 8,
                           ),
                           Text(
                             'Good',
@@ -130,9 +137,12 @@ class _HomePageState extends State<HomePage> {
                       // amazing
                       Column(
                         children: [
-                          EmoticonFace(emoticonFace: ''),
+                          IconButton(
+                              icon: Image.asset('images/party.png'),
+                              iconSize: 10,
+                              onPressed: () {}),
                           SizedBox(
-                            height: 7,
+                            height: 8,
                           ),
                           Text(
                             'Amazing',
@@ -180,11 +190,10 @@ class _HomePageState extends State<HomePage> {
                       ),
 
                       // list view of exercises - scrollable
-                      Expanded(
-                        child: ListView(
-                          scrollDirection: Axis.vertical,
-                        ),
-                      ),
+
+                      // ListView(
+                      //   scrollDirection: Axis.vertical,
+                      // ),
                     ],
                   ),
                 ),
