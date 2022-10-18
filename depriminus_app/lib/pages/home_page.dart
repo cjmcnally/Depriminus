@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:depriminus_app/util/emojis.dart';
 import 'package:depriminus_app/util/exercise_tile.dart';
-import 'package:depriminus_app/util/sad_exercise_tile.dart';
+import 'package:depriminus_app/tiles/sad_exercise_tile.dart';
+import 'package:depriminus_app/tiles/fine_exercise_tile.dart';
+import 'package:depriminus_app/tiles/good_exercise_tile.dart';
 import 'package:flutter/material.dart';
 
 // Home Screen
@@ -77,24 +79,28 @@ class _HomePageState extends State<HomePage> {
                 // Mood tracker
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
+                  children: <Widget>[
                     // bad
                     Emojis(
                         icon: Image.asset('images/sad.png'),
                         emojiName: 'Bad',
                         onPressed: () {
-                          // show.SadExerciseTile();
+                          SadExerciseTile();
                         }),
                     // fine
                     Emojis(
                         icon: Image.asset('images/confused.png'),
                         emojiName: 'Fine',
-                        onPressed: () {}),
+                        onPressed: () {
+                          FineExerciseTile();
+                        }),
                     // good
                     Emojis(
                         icon: Image.asset('images/smile.png'),
                         emojiName: 'Good',
-                        onPressed: () {}),
+                        onPressed: () {
+                          setState(() {});
+                        }),
                     // awesome
                     Emojis(
                         icon: Image.asset('images/party.png'),
@@ -146,7 +152,7 @@ class _HomePageState extends State<HomePage> {
 
                     // list view of exercises - scrollable
                     Expanded(
-                      child: SadExerciseTile(),
+                      child: FineExerciseTile(),
                     ),
                   ],
                 ),
