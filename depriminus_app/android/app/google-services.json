@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "100974511388",
+    "project_id": "flutterjournal",
+    "storage_bucket": "flutterjournal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100974511388:android:4c6bdf4a95abdbc6a166d9",
+        "android_client_info": {
+          "package_name": "com.example.depriminus_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100974511388-7980kb91ts1p8q4croevdukc8n18m1v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMTIAhoefAdlLMn17E3yd5Rn2TDMaz4Nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100974511388-7980kb91ts1p8q4croevdukc8n18m1v9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

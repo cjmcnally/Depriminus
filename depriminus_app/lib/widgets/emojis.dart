@@ -4,13 +4,12 @@ import 'package:flutter/material.dart';
 class Emojis extends StatelessWidget {
   final icon;
   final String emojiName;
-  final onPressed;
 
   const Emojis({
     super.key,
     required this.icon,
     required this.emojiName,
-    this.onPressed,
+    required void Function() onPressed,
   });
 
   @override

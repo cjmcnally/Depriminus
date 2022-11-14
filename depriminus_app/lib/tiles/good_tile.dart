@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
-import 'package:depriminus_app/util/exercise_tile.dart';
+import 'package:depriminus_app/widgets/exercise_info.dart';
 
-class FineExerciseTile extends StatelessWidget {
-  const FineExerciseTile({super.key});
+class GoodTile extends StatelessWidget {
+  const GoodTile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,20 +12,20 @@ class FineExerciseTile extends StatelessWidget {
         ExerciseTile(
           icon: Icons.favorite,
           exerciseName: 'Breathing Exercises',
-          numberOfExercises: 5,
-          color: Colors.orange,
+          numberOfExercises: 3,
+          color: Colors.lightGreen,
         ),
         ExerciseTile(
           icon: Icons.face_outlined,
           exerciseName: 'Mental Exercises',
-          numberOfExercises: 3,
-          color: Colors.blueAccent,
+          numberOfExercises: 5,
+          color: Colors.blueGrey,
         ),
         ExerciseTile(
           icon: Icons.star,
           exerciseName: 'Coping Skills',
-          numberOfExercises: 2,
-          color: Colors.pink,
+          numberOfExercises: 3,
+          color: Colors.purpleAccent,
         ),
       ],
     );

@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, file_names
 import 'package:flutter/material.dart';
-import 'package:icon_decoration/icon_decoration.dart';
 
 class ExerciseTile extends StatelessWidget {
   final icon;

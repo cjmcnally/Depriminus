@@ -1,20 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-import 'package:depriminus_app/util/emojis.dart';
-import 'package:depriminus_app/util/exercise_tile.dart';
-import 'package:depriminus_app/tiles/sad_exercise_tile.dart';
-import 'package:depriminus_app/tiles/fine_exercise_tile.dart';
-import 'package:depriminus_app/tiles/good_exercise_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:depriminus_app/tiles/sad_tile.dart';
+import 'package:depriminus_app/widgets/emojis.dart';
 
-// Home Screen
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class UserHome extends StatelessWidget {
+  const UserHome({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var background = Colors.deepPurple[800];
@@ -31,7 +22,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     // Welcome message
                     Text(
-                      'Hello Colin!',
+                      'Hello!',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,
@@ -79,33 +70,30 @@ class _HomePageState extends State<HomePage> {
                 // Mood tracker
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
+                  children: [
                     // bad
                     Emojis(
                         icon: Image.asset('images/sad.png'),
                         emojiName: 'Bad',
-                        onPressed: () {
-                          SadExerciseTile();
-                        }),
+                        onPressed: () {}),
                     // fine
                     Emojis(
-                        icon: Image.asset('images/confused.png'),
-                        emojiName: 'Fine',
-                        onPressed: () {
-                          FineExerciseTile();
-                        }),
+                      icon: Image.asset('images/confused.png'),
+                      emojiName: 'Fine',
+                      onPressed: () {},
+                    ),
                     // good
                     Emojis(
-                        icon: Image.asset('images/smile.png'),
-                        emojiName: 'Good',
-                        onPressed: () {
-                          setState(() {});
-                        }),
+                      icon: Image.asset('images/smile.png'),
+                      emojiName: 'Good',
+                      onPressed: () {},
+                    ),
                     // awesome
                     Emojis(
-                        icon: Image.asset('images/party.png'),
-                        emojiName: 'Awesome',
-                        onPressed: () {}),
+                      icon: Image.asset('images/party.png'),
+                      emojiName: 'Awesome',
+                      onPressed: () {},
+                    ),
                   ],
                 ),
               ],
@@ -151,9 +139,7 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                     // list view of exercises - scrollable
-                    Expanded(
-                      child: FineExerciseTile(),
-                    ),
+                    Expanded(child: SadTile()),
                   ],
                 ),
               ),

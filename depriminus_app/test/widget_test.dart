@@ -7,7 +7,7 @@
 
 // ignore_for_file: unused_import
 
-import 'package:depriminus_app/pages/home_page.dart';
+import 'package:depriminus_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:depriminus_app/main.dart';
