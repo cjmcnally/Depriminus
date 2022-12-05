@@ -1,7 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'package:depriminus_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:depriminus_app/tiles/sad_tile.dart';
 import 'package:depriminus_app/widgets/emojis.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:path/path.dart';
+import 'package:depriminus_app/tiles/sad_tile.dart';
+
+bool exerciseText = false;
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});
@@ -73,9 +79,10 @@ class UserHome extends StatelessWidget {
                   children: [
                     // bad
                     Emojis(
-                        icon: Image.asset('images/sad.png'),
-                        emojiName: 'Bad',
-                        onPressed: () {}),
+                      icon: Image.asset('images/sad.png'),
+                      emojiName: 'Bad',
+                      onPressed: () {},
+                    ),
                     // fine
                     Emojis(
                       icon: Image.asset('images/confused.png'),
@@ -138,8 +145,16 @@ class UserHome extends StatelessWidget {
                       height: 15,
                     ),
 
-                    // list view of exercises - scrollable
-                    Expanded(child: SadTile()),
+                    // expanded area
+                    Expanded(
+                        child: Center(
+                            child: Text(
+                      'Please select your mood from above.',
+                      style: GoogleFonts.roboto(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ))),
                   ],
                 ),
               ),
@@ -153,4 +168,89 @@ class UserHome extends StatelessWidget {
       body: body1,
     );
   }
+}
+
+showBadDialog(context) {
+  showDialog(
+    barrierDismissible: true,
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        backgroundColor: Colors.deepPurple[300],
+        title: const Text('Wait!'),
+        content: const Text('example text'),
+        actions: [
+          MaterialButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+showFineDialog(context) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        backgroundColor: Colors.deepPurple[300],
+        title: const Text('Fine Day Exercises'),
+        content: const Text('List of exercises'),
+        actions: [
+          MaterialButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+showGoodDialog(context) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        backgroundColor: Colors.deepPurple[300],
+        title: const Text('Good Day Exercises'),
+        content: const Text('List of exercises'),
+        actions: [
+          MaterialButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+showAmazingDialog(context) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        backgroundColor: Colors.deepPurple[300],
+        title: const Text('Amazing Day Exercises'),
+        content: const Text('List of exercises'),
+        actions: [
+          MaterialButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      );
+    },
+  );
 }

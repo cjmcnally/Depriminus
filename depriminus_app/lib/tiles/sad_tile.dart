@@ -6,30 +6,27 @@ class SadTile extends StatelessWidget {
   const SadTile({super.key});
   @override
   Widget build(BuildContext context) {
-    return Visibility(
-      visible: false,
-      child: ListView(
-        children: [
-          ExerciseTile(
-            icon: Icons.favorite,
-            exerciseName: 'Breathing Exercises',
-            numberOfExercises: 3,
-            color: Colors.lime,
-          ),
-          ExerciseTile(
-            icon: Icons.face_outlined,
-            exerciseName: 'Mental Exercises',
-            numberOfExercises: 3,
-            color: Colors.lightBlue,
-          ),
-          ExerciseTile(
-            icon: Icons.star,
-            exerciseName: 'Coping Skills',
-            numberOfExercises: 5,
-            color: Colors.deepPurple,
-          ),
-        ],
-      ),
+    return ListView(
+      children: [
+        ExerciseTile(
+          icon: Icons.favorite,
+          exerciseName: 'Breathing Exercises',
+          numberOfExercises: 3,
+          color: Colors.lime,
+        ),
+        ExerciseTile(
+          icon: Icons.face_outlined,
+          exerciseName: 'Mental Exercises',
+          numberOfExercises: 3,
+          color: Colors.lightBlue,
+        ),
+        ExerciseTile(
+          icon: Icons.star,
+          exerciseName: 'Coping Skills',
+          numberOfExercises: 5,
+          color: Colors.deepPurple,
+        ),
+      ],
     );
   }
 }

@@ -1,10 +1,8 @@
 // ignore_for_file: unused_import, prefer_const_constructors
 import 'package:depriminus_app/pages/home.dart';
 import 'package:depriminus_app/pages/journal.dart';
-import 'package:depriminus_app/pages/settings.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:depriminus_app/home_screen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:provider/provider.dart';
 
@@ -21,7 +19,57 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserHome(),
+      home: UserJournal(),
     );
   }
 }
+
+// void _navigateBottomBar(int index) {
+//   setState(() {
+//     _selectedIndex = index;
+//   });
+// }
+
+// final List<Widget> pages = [
+//   UserHome(),
+//   UserJournal(),
+//   UserSetting(),
+// ];
+
+// class Navbar extends StatelessWidget {
+//   const Navbar({super.key});
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       bottomNavigationBar: Container(
+//         color: Colors.white,
+//         child: Padding(
+//           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
+//           child: GNav(
+//             backgroundColor: Colors.white,
+//             color: Colors.black,
+//             activeColor: Colors.black,
+//             tabBackgroundColor: Colors.grey.shade200,
+//             gap: 5,
+//             padding: EdgeInsets.all(15),
+//             // onTabChange: _navigateBottomBar,
+//             tabs: const [
+//               GButton(
+//                 icon: Icons.home,
+//                 text: 'Home',
+//               ),
+//               GButton(
+//                 icon: Icons.message,
+//                 text: 'Journal',
+//               ),
+//               GButton(
+//                 icon: Icons.settings,
+//                 text: 'Settings',
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
