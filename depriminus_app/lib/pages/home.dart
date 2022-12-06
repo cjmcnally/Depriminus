@@ -1,17 +1,22 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-import 'package:depriminus_app/main.dart';
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:depriminus_app/tiles/sad_tile.dart';
 import 'package:depriminus_app/widgets/emojis.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:path/path.dart';
 import 'package:depriminus_app/tiles/sad_tile.dart';
+import 'dart:developer';
 
 bool exerciseText = false;
+double _volume = 0.0;
 
-class UserHome extends StatelessWidget {
+class UserHome extends StatefulWidget {
   const UserHome({super.key});
 
+  @override
+  State<UserHome> createState() => _UserHomeState();
+}
+
+class _UserHomeState extends State<UserHome> {
   @override
   Widget build(BuildContext context) {
     var background = Colors.deepPurple[800];
@@ -81,26 +86,31 @@ class UserHome extends StatelessWidget {
                     Emojis(
                       icon: Image.asset('images/sad.png'),
                       emojiName: 'Bad',
-                      onPressed: () {},
+                      q: () {
+                        print('Clicked');
+                      },
                     ),
                     // fine
                     Emojis(
-                      icon: Image.asset('images/confused.png'),
-                      emojiName: 'Fine',
-                      onPressed: () {},
-                    ),
+                        icon: Image.asset('images/confused.png'),
+                        emojiName: 'Fine',
+                        q: () {
+                          print('Clicked2');
+                        }),
                     // good
                     Emojis(
-                      icon: Image.asset('images/smile.png'),
-                      emojiName: 'Good',
-                      onPressed: () {},
-                    ),
+                        icon: Image.asset('images/smile.png'),
+                        emojiName: 'Good',
+                        q: () {
+                          print('Clicked3');
+                        }),
                     // awesome
                     Emojis(
-                      icon: Image.asset('images/party.png'),
-                      emojiName: 'Awesome',
-                      onPressed: () {},
-                    ),
+                        icon: Image.asset('images/party.png'),
+                        emojiName: 'Awesome',
+                        q: () {
+                          print('Clicked4');
+                        }),
                   ],
                 ),
               ],
