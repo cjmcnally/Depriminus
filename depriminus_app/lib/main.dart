@@ -24,52 +24,45 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// void _navigateBottomBar(int index) {
-//   setState(() {
-//     _selectedIndex = index;
-//   });
-// }
+final List<Widget> pages = [
+  UserHome(),
+  UserJournal(),
+];
 
-// final List<Widget> pages = [
-//   UserHome(),
-//   UserJournal(),
-//   UserSetting(),
-// ];
-
-// class Navbar extends StatelessWidget {
-//   const Navbar({super.key});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       bottomNavigationBar: Container(
-//         color: Colors.white,
-//         child: Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
-//           child: GNav(
-//             backgroundColor: Colors.white,
-//             color: Colors.black,
-//             activeColor: Colors.black,
-//             tabBackgroundColor: Colors.grey.shade200,
-//             gap: 5,
-//             padding: EdgeInsets.all(15),
-//             // onTabChange: _navigateBottomBar,
-//             tabs: const [
-//               GButton(
-//                 icon: Icons.home,
-//                 text: 'Home',
-//               ),
-//               GButton(
-//                 icon: Icons.message,
-//                 text: 'Journal',
-//               ),
-//               GButton(
-//                 icon: Icons.settings,
-//                 text: 'Settings',
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+class Navbar extends StatelessWidget {
+  const Navbar({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
+          child: GNav(
+            backgroundColor: Colors.white,
+            color: Colors.black,
+            activeColor: Colors.black,
+            tabBackgroundColor: Colors.grey.shade200,
+            gap: 5,
+            padding: EdgeInsets.all(15),
+            // onTabChange: _navigateBottomBar,
+            tabs: const [
+              GButton(
+                icon: Icons.home,
+                text: 'Home',
+              ),
+              GButton(
+                icon: Icons.message,
+                text: 'Journal',
+              ),
+              GButton(
+                icon: Icons.chat_bubble_outline,
+                text: 'Chat',
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
