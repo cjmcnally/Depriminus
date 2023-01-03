@@ -1,14 +1,19 @@
-// ignore_for_file: unused_import, prefer_const_constructors
+// ignore_for_file: unused_import, prefer_const_constructors, prefer_const_literals_to_create_immutables, must_be_immutable
+import 'package:depriminus_app/model/note.dart';
 import 'package:depriminus_app/pages/home.dart';
-import 'package:depriminus_app/pages/journal.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:depriminus_app/pages/notes_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:provider/provider.dart';
 
-Future<void> main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
   runApp(MyApp());
 }
 
@@ -19,50 +24,45 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserHome(),
+      home: NotesPage(),
     );
   }
 }
 
-final List<Widget> pages = [
-  UserHome(),
-  UserJournal(),
-];
+// class NBar extends StatefulWidget {
+//   NBar({super.key});
 
-class Navbar extends StatelessWidget {
-  const Navbar({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
-          child: GNav(
-            backgroundColor: Colors.white,
-            color: Colors.black,
-            activeColor: Colors.black,
-            tabBackgroundColor: Colors.grey.shade200,
-            gap: 5,
-            padding: EdgeInsets.all(15),
-            // onTabChange: _navigateBottomBar,
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: 'Home',
-              ),
-              GButton(
-                icon: Icons.message,
-                text: 'Journal',
-              ),
-              GButton(
-                icon: Icons.chat_bubble_outline,
-                text: 'Chat',
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+// int pageIndex = 0;
+
+// final pages = [
+//   const HomePage(),
+//   const NotesPage(),
+// ];
+
+//   @override
+//   State<NBar> createState() => _NBarState();
+// }
+
+// class _NBarState extends State<NBar> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: pages[pageIndex],
+//       bottomNavigationBar: BottomNavigationBar(
+//         items: const <BottomNavigationBarItem>[
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.home),
+//             label: 'Home',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.book_online),
+//             label: 'Journal',
+//           ),
+//         ],
+//         currentIndex: pageIndex,
+//         selectedItemColor: const Color.fromARGB(255, 43, 25, 147),
+//         onTap: _onItemTapped,
+//       ),
+//     );
+//   }
+// }
