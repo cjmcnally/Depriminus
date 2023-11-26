@@ -8,6 +8,8 @@ Homepage Includes:
 - Wellness Check
 - Motivational Tips or advice
 - Personalized approach
+![image](https://github.com/ispyc/Depriminus/assets/99578101/6a41dfac-c5db-4abb-a983-be9e42239cda)
+
 
 
 Journal page Includes: (Design inspired from HeyFlutter.com on YouTube)
@@ -15,4 +17,6 @@ Journal page Includes: (Design inspired from HeyFlutter.com on YouTube)
 - Edit current entries
 - Different colored entries
 - Saves entries on exit
+![image](https://github.com/ispyc/Depriminus/assets/99578101/751c7c5e-7d42-460d-8333-86dd0cfc7419)
+
 
