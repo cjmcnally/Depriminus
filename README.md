@@ -22,4 +22,14 @@ Journal page Includes: (Design inspired from HeyFlutter.com on YouTube)
   
 ![image](https://github.com/ispyc/Depriminus/assets/99578101/751c7c5e-7d42-460d-8333-86dd0cfc7419)
 
+How to run: 
+Download:
+Android Studio
+Flutter SQK
+VSCode
+
+
+
+
+
 
