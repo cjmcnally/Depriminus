@@ -2,7 +2,7 @@ Depress-Minus
 
 Depress-Minus is a mental health app which offers a personalized approach, some features include a journaling function and a daily wellness check. Whether you need an encouraging boost or seek professional therapeutic help, my app provides a safe and supportive space.
 
-Mainly used Dart, C++, NoSQL, and HTML. As well as Flutter for the package, and Android Studio for the android emulator, Figma for UI/UX design.
+Mainly used Dart, C++, Firebase (NoSQL), and HTML. As well as Flutter for the package, and Android Studio for the android emulator, Figma for UI/UX design.
 
 Homepage Includes:
 - Wellness Check
@@ -21,9 +21,9 @@ Journal page Includes: (Design inspired from HeyFlutter.com on YouTube)
 
 How to run: 
 Download:
-Android Studio, SDK Tools
-Flutter SDK, add to PATH 
-VSCode
+- Android Studio, SDK Tools
+- Flutter SDK, add to PATH 
+- VSCode
 
 
 
